@@ -1,0 +1,10 @@
+C:\Users\Kadin\Desktop\HartUFMG\bin\Release\HartUFMG.exe
+C:\Users\Kadin\Desktop\HartUFMG\bin\Release\HartUFMG.pdb
+C:\Users\Kadin\Desktop\HartUFMG\bin\Release\Communication.HartLite.dll
+C:\Users\Kadin\Desktop\HartUFMG\bin\Release\log4net.dll
+C:\Users\Kadin\Desktop\HartUFMG\bin\Release\Communication.HartLite.pdb
+C:\Users\Kadin\Desktop\HartUFMG\bin\Release\log4net.xml
+C:\Users\Kadin\Desktop\HartUFMG\obj\Release\HartUFMG.csproj.CoreCompileInputs.cache
+C:\Users\Kadin\Desktop\HartUFMG\obj\Release\HartUFMG.csproj.CopyComplete
+C:\Users\Kadin\Desktop\HartUFMG\obj\Release\HartUFMG.exe
+C:\Users\Kadin\Desktop\HartUFMG\obj\Release\HartUFMG.pdb

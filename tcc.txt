@@ -1,0 +1,16 @@
+incluir no pfc 
+definção de FDT-DTM, DD, EDD, FDI
+
+Registrar opção dos dados hart (dados lentos, boa qualidade, transmissão iot)
+
+* acesso ao DD pago, Associado a HART Foundation
+
+2 alternativas
+
+- comandos universais
+- conheço resposta esperada (citar documento), diagnostico generico, unidade de engenharia (criar tabela).
+
+broker ufmg gratis paho mqtt formato HART
+
+influx db 
+

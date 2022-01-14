@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HartUFMG", "HartUFMG.csproj", "{402477FB-E12B-452B-AB22-66E5520E65DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Communication.HartLite", "..\HartProtocolLite\sourceCode\trunk\Communication.HartLite\Communication.HartLite.csproj", "{FABABCC7-9A94-4DDD-92F2-91427B2BEBB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{402477FB-E12B-452B-AB22-66E5520E65DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{402477FB-E12B-452B-AB22-66E5520E65DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{402477FB-E12B-452B-AB22-66E5520E65DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{402477FB-E12B-452B-AB22-66E5520E65DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FABABCC7-9A94-4DDD-92F2-91427B2BEBB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FABABCC7-9A94-4DDD-92F2-91427B2BEBB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FABABCC7-9A94-4DDD-92F2-91427B2BEBB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FABABCC7-9A94-4DDD-92F2-91427B2BEBB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7AEFEA9-0C31-46FA-B57B-2EBEE2D192A6}
+	EndGlobalSection
+EndGlobal

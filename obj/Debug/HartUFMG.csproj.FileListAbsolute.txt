@@ -1,0 +1,16 @@
+C:\Users\Kadin\Desktop\HartUFMG\bin\Debug\HartUFMG.exe
+C:\Users\Kadin\Desktop\HartUFMG\bin\Debug\HartUFMG.pdb
+C:\Users\Kadin\Desktop\HartUFMG\bin\Debug\Communication.HartLite.dll
+C:\Users\Kadin\Desktop\HartUFMG\bin\Debug\log4net.dll
+C:\Users\Kadin\Desktop\HartUFMG\bin\Debug\Communication.HartLite.pdb
+C:\Users\Kadin\Desktop\HartUFMG\bin\Debug\log4net.xml
+C:\Users\Kadin\Desktop\HartUFMG\obj\Debug\HartUFMG.csproj.CoreCompileInputs.cache
+C:\Users\Kadin\Desktop\HartUFMG\obj\Debug\HartUFMG.csproj.CopyComplete
+C:\Users\Kadin\Desktop\HartUFMG\obj\Debug\HartUFMG.exe
+C:\Users\Kadin\Desktop\HartUFMG\obj\Debug\HartUFMG.pdb
+C:\Users\Kadin\Desktop\HartUFMG\obj\Debug\HartUFMG.csproj.AssemblyReference.cache
+C:\Users\Kadin\Desktop\HartUFMG\bin\Debug\HartUFMG.exe.config
+C:\Users\Kadin\Desktop\HartUFMG\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kadin\Desktop\HartUFMG\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kadin\Desktop\HartUFMG\bin\Debug\M2Mqtt.Net.dll
+C:\Users\Kadin\Desktop\HartUFMG\bin\Debug\M2Mqtt.Net.pdb
