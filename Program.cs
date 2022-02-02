@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Text;
+using System.Threading;
 using Communication.HartLite;
 using Newtonsoft.Json;
 using uPLibrary.Networking.M2Mqtt;
@@ -20,8 +21,6 @@ namespace HartUFMG
             CreateUnityDictionary();
             string[] ports = SerialPort.GetPortNames();
 
-            Console.WriteLine("The following serial ports were found:");
-
             // Display each port name to the console.
             foreach (string port in ports)
             {
@@ -30,10 +29,10 @@ namespace HartUFMG
 
             HartCommunicationLite hartCommunicationLite = new HartCommunicationLite("COM1");
             OpenResult openResult = hartCommunicationLite.Open();
-
+            Console.WriteLine("Conectando se porta COM1");
             if (openResult != OpenResult.Opened)
                 return;
-
+            Console.WriteLine("Conectando a porta COM1!");
             hartCommunicationLite.PreambleLength = 10;
             hartCommunicationLite.Receive += ReceiveValueHandle;
             hartCommunicationLite.SendingCommand += SendingValueHandle;
@@ -42,13 +41,16 @@ namespace HartUFMG
             
             try
             {
+                /*
                 mqttClient = new MqttClient("9ad5964d48f54c5d90d18fbec9bb78d8.s2.eu.hivemq.cloud",
                                 uPLibrary.Networking.M2Mqtt.MqttSettings.MQTT_BROKER_DEFAULT_SSL_PORT, true, MqttSslProtocols.TLSv1_2, null, null);
-                //.ProtocolVersion = MqttProtocolVersion.Version_3_1;
+                //.ProtocolVersion = MqttProtocolVersion.Version_3_1;*/
+                mqttClient = new MqttClient("127.0.0.1");
+                Console.WriteLine("Conectando se ao Broker em 127.0.0.1:8086...");
                 mqttClient.MqttMsgPublishReceived += MqttClient_MqttMsgPublishReceived1;
-                mqttClient.Subscribe(new string[] { "devices/sensors/temperature" }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_MOST_ONCE });
+               // mqttClient.Subscribe(new string[] { "devices/sensors/pressure" }, new byte[] { MqttMsgBase.QOS_LEVEL_AT_MOST_ONCE });
                 mqttClient.Connect(Guid.NewGuid().ToString(), "MyDevice", "MyDevice123");
-
+                Console.WriteLine("Conexão ao Broker em 127.0.0.1:8086 bem sucedida!");
             }
             catch (Exception e)
             {
@@ -61,7 +63,7 @@ namespace HartUFMG
             {
                 //input should be in format like "1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0" 
                 //this is the command 17 with 24 bytes with 0 value
-                string input = Console.ReadLine();
+                string input = "1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0";
 
                 if (input == "exit")
                     break;
@@ -77,6 +79,8 @@ namespace HartUFMG
                 }
 
                 hartCommunicationLite.SendAsync(Convert.ToByte(values[0]), databytes.ToArray());
+
+                Thread.Sleep(5000);
             }
 
             hartCommunicationLite.Receive -= ReceiveValueHandle;
@@ -132,14 +136,15 @@ namespace HartUFMG
         {
             string jsonP = JsonConvert.SerializeObject(new
             {
-                Pressão = f,
+                Telemetry = f,
                 Unit = UnityCode[b],
                 QoS = "Good",
                 sent = DateTime.Now
             });
             if (mqttClient != null && mqttClient.IsConnected)
             {
-                mqttClient.Publish("devices/sensors/temperature", Encoding.UTF8.GetBytes(jsonP));
+                mqttClient.Publish("devices/sensors/pressure", Encoding.UTF8.GetBytes(jsonP));
+                Console.WriteLine(string.Format("Mensagem enviada ao tópico devices/sensors/pressure:\nTelemetria: {0} {1} \n", f, UnityCode[b]));
             }
 
 
